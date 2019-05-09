@@ -1,0 +1,6 @@
+com\lightbend\akka\sample\Greeter.class
+com\lightbend\akka\sample\Greeter$Greet.class
+com\lightbend\akka\sample\AkkaQuickstart.class
+com\lightbend\akka\sample\Printer.class
+com\lightbend\akka\sample\Greeter$WhoToGreet.class
+com\lightbend\akka\sample\Printer$Greeting.class
