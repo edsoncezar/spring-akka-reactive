@@ -13,7 +13,7 @@ public class AkkaQuickstart {
     final ActorSystem system = ActorSystem.create("helloakka");
     try {
     	
-      for (int i = 0; i < 20000; i++) {
+      for (int i = 0; i < 200000; i++) {
     	
       //#create-actors
       final ActorRef printerActor = 

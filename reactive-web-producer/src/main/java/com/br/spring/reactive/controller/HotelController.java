@@ -32,7 +32,7 @@ public class HotelController {
 
     	String streetAddress = faker.address().streetAddress();
     	
-    	for (int i = 0; i < 20000; i++) {
+    	for (int i = 0; i < 200000; i++) {
     	
     		hotelList.add(new Hotel(i, "HOTEL " +firstName+ " ENDEREÇO " +streetAddress));
         

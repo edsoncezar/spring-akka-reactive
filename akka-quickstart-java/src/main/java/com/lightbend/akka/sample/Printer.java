@@ -1,5 +1,8 @@
 package com.lightbend.akka.sample;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import akka.actor.AbstractActor;
 import akka.actor.Props;
 import akka.event.Logging;
@@ -24,14 +27,19 @@ public class Printer extends AbstractActor {
 
   private LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
 
+  private static long start = System.currentTimeMillis();
+  
+  SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss.SSS");
+  String date =  dateFormat.format(start);
+  
   public Printer() {
   }
 
   @Override
-  public Receive createReceive() {
+  public Receive createReceive() { 
     return receiveBuilder()
         .match(Greeting.class, greeting -> {
-            log.info(greeting.message);
+            log.info(greeting.message + " "+ date);
         })
         .build();
   }

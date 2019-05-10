@@ -23,10 +23,17 @@ public class CallHotelUsingRestTemplate {
 
 	public static void main(String[] args) {
 		Instant start = Instant.now();
-
-		for (int i = 1; i <= 5; i++) {
+		
+		System.out.println("INITIAL TIME : "+start);
+		
+		for (int i = 1; i <= 199999; i++) {
 			restTemplate.getForObject("/hotel/{id}", Hotel.class, i);
 		}
+		
+		Instant end = Instant.now();
+		
+		System.out.println("INITIAL TIME : "+start);
+		System.out.println("FINAL TIME : "+end);
 
 		logTime(start);
 	}

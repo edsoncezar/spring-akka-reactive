@@ -24,7 +24,7 @@ public class GreetReactiveController {
 
     	String streetAddress = faker.address().streetAddress();
 		
-		Flux<Greeting> greetingFlux = Flux.<Greeting>generate(sink -> sink.next(new Greeting("HOTEL " +firstName+ " ENDEREÇO " +streetAddress))).take(50);
+		Flux<Greeting> greetingFlux = Flux.<Greeting>generate(sink -> sink.next(new Greeting("HOTEL " +firstName+ " ENDEREÇO " +streetAddress))).take(200000);
 		return greetingFlux;
 	}
 
