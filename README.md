@@ -9,7 +9,7 @@ Reactive Streams is an initiative to provide a standard for asynchronous flow pr
 
 What we want is asynchronous and non-blocking. A group of developers of companies like Netflix, Pivotal, RedHat, etc. met and converged to something called The Reactive Streams Specification.
 
-  Akka framework
+Akka framework
 
 Akka is an Opensource framework.
 
@@ -86,6 +86,7 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.558 s - in rea
 INITIAL TIME: 2019-05-10T12:53:24.858Z
 
 FINAL TIME: 2019-05-10T12:59:54.453Z 
+
 Average 30 seconds
 
 Conclusion:
