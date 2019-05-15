@@ -9,3 +9,7 @@ git push origin master
 How to remove files on git
 
 git rm .class
+
+How to revert a commit on git
+
+git reset
