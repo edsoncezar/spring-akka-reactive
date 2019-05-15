@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hotel.model.Employee;
-import com.hotel.persistence.EmployeeRepository;
+import com.hotel.model.Hotel;
+import com.hotel.persistence.HotelRepository;
 
 @Component
 @ConfigurationProperties
 @RestController
-public class EmployeeController {
+public class HotelController {
 
 
 	@Value("${application.message}")
@@ -26,20 +26,20 @@ public class EmployeeController {
 	String appname;
 
 	@Autowired
-	private EmployeeRepository employeeRepository;
+	private HotelRepository hotelRepository;
 
 	@RequestMapping("/")
 	String home() {
 		return "Hello World!- " + message + " " + appname;
 	}
 
-	@RequestMapping(value = "/employee", method = RequestMethod.POST)
-	public Employee create(@RequestBody Employee employee) {
-		return employeeRepository.save(employee);
+	@RequestMapping(value = "/hotel", method = RequestMethod.POST)
+	public Hotel create(@RequestBody Hotel hotel) {
+		return hotelRepository.save(hotel);
 	}
 
-	@RequestMapping(method = RequestMethod.GET, value = "/{employeeId}")
-	public Employee get(@PathVariable String employeeId) {
-		return employeeRepository.findOne(employeeId);
+	@RequestMapping(method = RequestMethod.GET, value = "/{hotelId}")
+	public Hotel get(@PathVariable String hotelId) {
+		return hotelRepository.findOne(hotelId);
 	}
 }

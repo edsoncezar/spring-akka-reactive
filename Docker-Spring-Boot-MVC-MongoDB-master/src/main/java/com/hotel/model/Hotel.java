@@ -3,8 +3,8 @@ package com.hotel.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "employees")
-public class Employee {
+@Document(collection = "hotels")
+public class Hotel {
 
 	@Id
 	private String id;
@@ -47,7 +47,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", email=" + email + ", fullName=" + fullName + ", managerEmail=" + managerEmail
+		return "Hotel [id=" + id + ", email=" + email + ", fullName=" + fullName + ", managerEmail=" + managerEmail
 				+ "]";
 	}
 
