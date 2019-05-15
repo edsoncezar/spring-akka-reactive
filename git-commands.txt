@@ -1,0 +1,11 @@
+﻿Initial project on git:
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin youruser@yourserver.com:/path/to/my_project.git
+git push origin master
+
+How to remove files on git
+
+git rm .class
