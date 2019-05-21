@@ -13,3 +13,10 @@ git rm .class
 How to revert a commit on git
 
 git reset
+
+git-fetch - Download objects and refs from another repository
+
+git fetch [<options>] [<repository> [<refspec>…​]]
+git fetch [<options>] <group>
+git fetch --multiple [<options>] [(<repository> | <group>)…​]
+git fetch --all [<options>]
